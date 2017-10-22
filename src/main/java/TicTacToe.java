@@ -3,13 +3,28 @@
  */
 
 import static spark.Spark.*;
-
+/** 
+ * <h1>Tic Tac Toe</h1>
+ * This is the business code of our solution
+*/
 public class TicTacToe {
-    public static String getGreeting() {
+    /**
+     * getGreeting() is a sample function used primarily
+     * for testing Heroku and rudimentary setup of the 
+     * developement environment and javadoc syntax.
+     * It's parameters are completely irrelevant and
+     * unused.
+     * 
+     * @param param1 this would be the functions first param
+     * @param param2 and this the second
+     * @return A 'Hello World' String
+     * 
+     */
+    public static String getGreeting(int param1, String param2) {
         return "Hello world.";
     }
 
     public static void main(String[] args) {
-        get("/", (req, res) -> getGreeting());
+        get("/", (req, res) -> getGreeting(1," "));
     }
 }
