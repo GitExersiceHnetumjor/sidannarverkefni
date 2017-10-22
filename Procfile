@@ -1,1 +1,1 @@
-web: build/install/sidannarverkefni/bin/sidannarverkefni app:app
+web: .\build\install\sidannarverkefni\bin\sidannarverkefni
