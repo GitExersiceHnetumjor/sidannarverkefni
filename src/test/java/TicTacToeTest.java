@@ -7,6 +7,6 @@ import static org.junit.Assert.*;
 public class TicTacToeTest {
     @Test public void testAppHasAGreeting() {
         TicTacToe classUnderTest = new TicTacToe();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        assertNotNull("app should have a greeting", classUnderTest.getGreeting(1, " "));
     }
 }
