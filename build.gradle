@@ -32,6 +32,3 @@ dependencies {
 
 task stage(dependsOn: ['clean', 'installDist'])
 
-// Define the main class for the application
-mainClassName = 'App'
-
