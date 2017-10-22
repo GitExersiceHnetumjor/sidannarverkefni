@@ -30,6 +30,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+task stage(dependsOn: ['clean', 'installDist'])
+
 // Define the main class for the application
 mainClassName = 'App'
 
