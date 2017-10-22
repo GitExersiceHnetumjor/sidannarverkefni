@@ -5,11 +5,11 @@
 import static spark.Spark.*;
 
 public class TicTacToe {
-    public String getGreeting() {
+    public static String getGreeting() {
         return "Hello world.";
     }
 
     public static void main(String[] args) {
-        System.out.println(new TicTacToe().getGreeting());
+        get("/", (req, res) -> getGreeting());
     }
 }
