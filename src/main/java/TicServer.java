@@ -58,7 +58,7 @@ public class TicServer {
     }
 
     public String reset(){
-        board = new Tac();
+        board = new Tic();
         return "success";
     }
 
