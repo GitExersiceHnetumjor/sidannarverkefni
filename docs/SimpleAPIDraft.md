@@ -13,7 +13,7 @@ Function | Parameter | Return | Description
 `boolean isDraw()` | `null` | `boolean` value indicating draw | 
 `boolean hasWon()` | `null` | `boolean` value indicating victory | in case of victory getPlayer returns winner
 
-## TicServer.java
+## TicServer.java / "REST API"
 
 Endpoint | Parameter | Return value | Description
 --- | --- | --- | ---
