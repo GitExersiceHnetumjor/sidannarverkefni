@@ -19,24 +19,24 @@ Hér mun síðan eitthvað standa um lausnina okkar.
 reviews before accepting pull-requests. (1 point)
 11. More build targets (0,5 point per item, never more than 1 for this part) here
 are examples of build targets.
-* Code coverage and other code inspections. Report or other kind of
+    * Code coverage and other code inspections. Report or other kind of
 result must be available outside of the build machine after each run.
-* Integrate database
-* ~~Documentation is converted to another format (e.g PDF or Html) and is
+    * Integrate database
+    * ~~Documentation is converted to another format (e.g PDF or Html) and is
 easily accessible outside of the build machine after each run (the build
 script needs to publish the documents to an external server).~~ *(held þetta sé nógu gott - spyrja kennara)*
-* Something else ... Surprise us!!!
+    * Something else ... Surprise us!!!
 12. Run focused integration or End-to-end tests (e.g. Selenium). It is necessary
 to run this on external staging server (e.g. Heroku). To run integration test
 the application needs to connect to external system e.g. database. To run
 end-to-end test the system needs to have GUI (e.g. webUI). (1 point)
 13. Continuous Delivery. For each code change the CI server runs these steps:
 **Only continue next step if previous step is success**
-* Run build script (all targets)
-* Run unit and integration tests (if you have integration tests) Deploy on
+    * Run build script (all targets)
+    * Run unit and integration tests (if you have integration tests) Deploy on
 staging and run End-to-end tests.
-* Deploy to production server.
-* Generate feedback to developer
+    * Deploy to production server.
+    * Generate feedback to developer
 
 **Solving parts 1-9 perfectly will together give a grade of 6**, it's OK to have all
 targets in build script manual. Next parts need to be solved incrementally, e.g.
@@ -46,10 +46,10 @@ Return form
 1. URL of root of the project in the source control system.
 2. Documentation. The following report should all be stored in a folder called
 docs in the root of the repository.
-* Development manual: what is needed and how to get the project to
+    * Development manual: what is needed and how to get the project to
 build on a fresh machine, Source control client and access to source
 control Build environment, Other necessary dependencies for
 development.
-* Administration manual: How to set it up and get it to run, also on a
+    * Administration manual: How to set it up and get it to run, also on a
 fresh machine. How to deploy, run and maintain
-* Design report: Document describing the initial design.
+    * Design report: Document describing the initial design.
