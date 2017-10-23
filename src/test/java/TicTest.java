@@ -81,4 +81,11 @@ public class TicTest {
 		t.updateBoard(5);
 		assertFalse(Tic.isDraw());
 	}
+
+	@Test
+	public void testBoard() {
+		Tic t = new Tic();
+		t.updateBoard(1);
+		assertEquals(t.board()[0], 'X');		
+	}
 }

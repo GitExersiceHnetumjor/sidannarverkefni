@@ -16,6 +16,10 @@ public class Tic {
 		}
 	}
 
+	public static char[] board() {
+		return board;
+	}
+	
 	public static boolean updateBoard(int t) {
 		checkInput(t);
 		if (board[t - 1] == 'X' || board[t - 1] == 'O' ) {
