@@ -17,7 +17,7 @@ Function | Parameter | Return | Description
 
 Endpoint | Parameter | Return value | Description
 --- | --- | --- | ---
-`/update` | `/field` to update | Returns `JSON` representation of board | 
+`/update` | `/field` to update | Returns `JSON` representation of board | [Sample Payload][1]
 
 ### Sample JSON Payload
 ```JSON
@@ -27,3 +27,4 @@ Endpoint | Parameter | Return value | Description
   "nextMove": "x"
 }
 ```
+[1]: https://github.com/GitExersiceHnetumjor/sidannarverkefni/blob/master/docs/SimpleAPIDraft.md#sample-json-payload
