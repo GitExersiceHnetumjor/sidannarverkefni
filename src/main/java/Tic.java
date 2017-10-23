@@ -42,5 +42,9 @@ public class Tic {
 		}
 		return true;
 	}
+
+	public static char player() {
+		return activePlayer;
+	}
 }
 
