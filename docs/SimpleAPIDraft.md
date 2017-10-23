@@ -23,7 +23,7 @@ Endpoint | Parameter | Return value | Description
 ```JSON
 {
   "board": ["1", "x", "o", "4", "o", "x", "x", "o", "9"],
-  "gameStatus": "ongoing",
+  "status": "ongoing",
   "nextMove": "x"
 }
 ```
