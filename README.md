@@ -9,8 +9,8 @@
 3. ~~The build script runs all unit tests.~~
 4. ~~This is not applicable if the project running a Web App on Heroku.~~
 5. ~~The build script has deploy/install target that deploys the site on external server (Heroku).~~
-6. The business logic should be coded using Test Driven Development.
-7. The code should be loosely coupled and follow good object oriented design practices.
+6. ~~The business logic should be coded using Test Driven Development.~~
+7. ~~The code should be loosely coupled and follow good object oriented design practices.~~
 8. ~~Documentation uses Markdown syntax.~~
 9. ~~Use Automated Continuous Integration Server (e.g.Travis CI).~~
 10. Use feature branches and pull request with reviews for all features. *(1 point)*
