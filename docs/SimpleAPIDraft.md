@@ -6,9 +6,24 @@ opted to design these API's to keep our kode loosely coupled and clearly separat
 
 Function | Parameter | Return | Description
 --- | --- | --- | ----
-void Tic() | null | null | Constructor
-char getPlayer() | null | char 'x' / 'o' | returns current player
-boolean updateBoard(int field) | field to mark | boolean value for success | marks new field and returns true for success
-char[] getBoard() | null | array representation of board fields | indexes contain 'o', 'x' or ' '.
-boolean isDraw() | null | boolean value indicating draw | 
-boolean hasWon() | null | boolean value indicating victory | in case of victory getPlayer returns winner
+`void Tic()` | `null` | `null` | Constructor
+`char getPlayer()` | `null` | `char` 'x' / 'o' | returns current player
+`boolean updateBoard(int field)` | field to mark | boolean value for success | marks new field and returns true for success
+`char[] getBoard()` | `null` | `array` representation of board fields | indexes contain 'o', 'x' or ' '.
+`boolean isDraw()` | `null` | `boolean` value indicating draw | 
+`boolean hasWon()` | `null` | `boolean` value indicating victory | in case of victory getPlayer returns winner
+
+## TicServer.java
+
+Endpoint | Parameter | Return value | Description
+--- | --- | --- | ---
+`/update` | `/field` to update | Returns `JSON` representation of board | 
+
+### Sample JSON Payload
+```JSON
+{
+  "board": [" ", "x", "o", " ", "o", "x", "x", "o", " "],
+  "gameStatus": "ongoing",
+  "nextMove": "x"
+}
+```
