@@ -1,31 +1,43 @@
-		.theGame {
-			width: 350px;
-			height: 350px;
-			background: #eee;
-			border: 1px solid #ddd;
-			margin: 50px auto;
-			padding: 10px;
-			overflow: auto;
-		}
+.theGame {
+	width: 350px;
+	height: 350px;
+	background: #eee;
+	border: 1px solid #ddd;
+	margin: 50px auto;
+	padding: 10px;
 
-		.theGame div {
-			margin: 0 auto;
-			clear: both;
-			width: 180px;
-		}
+}
 
-		.theGame button {
-			display: block;
-			float: left;
-			width: 50px;
-			height: 50px;
-			margin: 5px;
-		}
+.theGame div {
+	margin: 0 auto;
+	clear: both;
+	width: 180px;
+}
 
-		.theButtons {
-			padding-top: 60px;
-		}
+.theGame button {
+	display: block;
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+}
 
-		.gameActions {
-			padding: 20px 10px;
-		}
+.theButtons {
+	padding-top: 60px;
+}
+
+.gameActions {
+	margin-left: 40%;
+	margin-right: 40%;
+	padding: 10px;
+	overflow: auto;
+}
+
+.gameActions h3 {
+	color: green;
+	margin-bottom: 3px;
+}
+
+.gameActions h4 {
+	margin-top: 3px;
+}
