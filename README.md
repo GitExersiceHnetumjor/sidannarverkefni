@@ -1,9 +1,7 @@
 # Síðannarverkefni - Epli og Hnetusmjör [![Build Status](https://travis-ci.org/GitExersiceHnetumjor/sidannarverkefni.svg?branch=master)](https://travis-ci.org/GitExersiceHnetumjor/sidannarverkefni)
 *Ellen - Hannes - Helgi - Ívar - Ketill - Margrét - Sigurður*
 
-Hér mun síðan eitthvað standa um lausnina okkar.
-
-## [Létt Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+### +[Létt Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 # Checklist Late-term Assignment
 1. ~~The codebase is stored in source control system on GitHub from early start~~
@@ -25,15 +23,13 @@ result must be available outside of the build machine after each run.
 easily accessible outside of the build machine after each run (the build
 script needs to publish the documents to an external server).~~ *(held þetta sé nógu gott - spyrja kennara)*
     * Something else ... Surprise us!!!
-12. Run focused integration or End-to-end tests (e.g. Selenium). It is necessary
-to run this on external staging server (e.g. Heroku). To run integration test
-the application needs to connect to external system e.g. database. To run
-end-to-end test the system needs to have GUI (e.g. webUI). (1 point)
-13. Continuous Delivery. For each code change the CI server runs these steps:
+12. Run focused integration or End-to-end tests (e.g. Selenium). 
+    * It is necessary to run this on external staging server (e.g. Heroku). To run end-to-end test 
+    the system needs to have GUI (e.g. webUI). (1 point)
+13. Continuous Delivery. For each code change the CI server runs these steps:  
 **Only continue next step if previous step is success**
     * Run build script (all targets)
-    * Run unit and integration tests (if you have integration tests) Deploy on
-staging and run End-to-end tests.
+    * Run unit and End-to-end tests.
     * Deploy to production server.
     * Generate feedback to developer
 
