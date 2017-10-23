@@ -16,5 +16,23 @@ public class TicTest {
 		Tic t = new Tic();
 		assertTrue(t.updateBoard(8));		
 	}
+
+	@Test
+	public void testInvalidInput() {
+		IllegalArgumentException e = null;
+		try {
+			Tic.updateBoard(-1);
+		} catch (IllegalArgumentException ex) {
+			e = ex;
+		}
+		if (e != null) {
+			assertEquals(e.getMessage(), "Invalid Input");
+		}
+	}
+
+	@Test
+	public void testValidInputLetter() {
+		assertTrue(Tic.updateBoard(2));		
+	}
 	
 }

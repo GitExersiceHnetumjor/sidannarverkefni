@@ -17,7 +17,7 @@ public class Tic {
 	}
 
 	public static boolean updateBoard(int t) {
-	
+		checkInput(t);
 		if (board[t - 1] == 'X' || board[t - 1] == 'O' ) {
 			return false;
 		}
@@ -32,6 +32,13 @@ public class Tic {
 			
 			activePlayer = 'X';
 			
+		}
+		return true;
+	}
+
+	private static boolean checkInput(int c) {
+		if (c < 0 || c > 9) {
+			throw new IllegalArgumentException("Invalid Input");	
 		}
 		return true;
 	}
