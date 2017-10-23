@@ -35,4 +35,24 @@ public class TicTest {
 		assertTrue(Tic.updateBoard(2));		
 	}
 	
+	@Test
+	public void testTrueWinner() {
+		Tic t = new Tic();
+		t.updateBoard(1);
+		t.updateBoard(2);
+		t.updateBoard(3);
+		t.updateBoard(4);
+		t.updateBoard(5);
+		t.updateBoard(6);
+		t.updateBoard(7);
+		assertTrue(t.isWinner());
+		assertEquals(t.player(), 'X');
+	}
+
+	@Test
+	public void testFalseWinner() {
+		Tic t = new Tic();
+		t.updateBoard(1);
+		assertFalse(Tic.isWinner());
+	}
 }

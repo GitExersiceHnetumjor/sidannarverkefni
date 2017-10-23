@@ -32,3 +32,9 @@ dependencies {
 
 task stage(dependsOn: ['clean', 'installDist'])
 
+task generateJavaDoc(type: Javadoc){
+    source = sourceSets.main.allJava
+    outputs.upToDateWhen { false }
+}
+
+build.dependsOn generateJavaDoc
