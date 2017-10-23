@@ -26,6 +26,7 @@ public class TicServer {
     private void init() {
         board = new Tic();
         get("/mark/:field", (req, res) -> mark(req.params(":field")));
+        get("/newGame", (req, res) -> reset());
     }
 
     private JSONObject mark(String field) {
@@ -54,6 +55,10 @@ public class TicServer {
         obj.put("nextMove", Character.toString(nextPlayer));
 
         return obj;
+    }
+
+    public void reset(){
+        board = new Tac();
     }
 
     public static void main(String[] args) {
