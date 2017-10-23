@@ -19,9 +19,11 @@
     * Code coverage and other code inspections. Report or other kind of
 result must be available outside of the build machine after each run.
     * Integrate database
-    * ~~Documentation is converted to another format (e.g PDF or Html) and is
+    * Documentation is converted to another format (e.g PDF or Html) and is
 easily accessible outside of the build machine after each run (the build
-script needs to publish the documents to an external server).~~ *(held þetta sé nógu gott - spyrja kennara)*
+script needs to publish the documents to an external server). *(held þetta sé nógu gott - spyrja kennara)*
+        * Var búinn að útfæra /build/docs/../[classname.java] með `gradle javadoc` - en það orsakaði   
+        slatta af merge conflictum.
     * Something else ... Surprise us!!!
 12. Run focused integration or End-to-end tests (e.g. Selenium). 
     * It is necessary to run this on external staging server (e.g. Heroku). To run end-to-end test 
