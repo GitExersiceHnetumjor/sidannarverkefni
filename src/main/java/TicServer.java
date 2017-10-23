@@ -57,9 +57,22 @@ public class TicServer {
         return obj;
     }
 
-    public String reset(){
+    public JSONObject reset(){
         board = new Tic();
-        return "success";
+        JSONObject obj = new JSONObject();
+        obj.put("board", board.board());
+        char nextPlayer = board.player();
+
+        if (board.isDraw()) {
+            obj.put("status", "draw");
+        } else if (board.isWinner()) {
+            obj.put("status", "win" + nextPlayer);
+        } else {
+            obj.put("status", "ongoing");
+        }
+
+        obj.put("nextMove", Character.toString(nextPlayer));
+        return obj;
     }
 
     public static void main(String[] args) {
