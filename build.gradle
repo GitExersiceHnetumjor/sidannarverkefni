@@ -12,7 +12,7 @@ apply plugin: 'java'
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
 
-mainClassName='TicTacToe'
+mainClassName='TicServer'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -25,6 +25,8 @@ dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:22.0'
     compile 'com.sparkjava:spark-core:2.6.0'
+    // https://mvnrepository.com/artifact/org.json/json
+    compile group: 'org.json', name: 'json', version: '20171018'
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
