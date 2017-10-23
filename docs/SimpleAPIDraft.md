@@ -22,7 +22,7 @@ Endpoint | Parameter | Return value | Description
 ### `/mark/` Sample JSON Payload
 ```JSON
 {
-  "board": [" ", "x", "o", " ", "o", "x", "x", "o", " "],
+  "board": ["1", "x", "o", "4", "o", "x", "x", "o", "9"],
   "gameStatus": "ongoing",
   "nextMove": "x"
 }
