@@ -1,0 +1,31 @@
+		.theGame {
+			width: 350px;
+			height: 350px;
+			background: #eee;
+			border: 1px solid #ddd;
+			margin: 50px auto;
+			padding: 10px;
+			overflow: auto;
+		}
+
+		.theGame div {
+			margin: 0 auto;
+			clear: both;
+			width: 180px;
+		}
+
+		.theGame button {
+			display: block;
+			float: left;
+			width: 50px;
+			height: 50px;
+			margin: 5px;
+		}
+
+		.theButtons {
+			padding-top: 60px;
+		}
+
+		.gameActions {
+			padding: 20px 10px;
+		}
