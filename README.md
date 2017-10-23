@@ -9,8 +9,8 @@
 3. ~~The build script runs all unit tests.~~
 4. ~~This is not applicable if the project running a Web App on Heroku.~~
 5. ~~The build script has deploy/install target that deploys the site on external server (Heroku).~~
-6. The business logic should be coded using Test Driven Development.
-7. The code should be loosely coupled and follow good object oriented design practices.
+6. ~~The business logic should be coded using Test Driven Development.~~
+7. ~~The code should be loosely coupled and follow good object oriented design practices.~~
 8. ~~Documentation uses Markdown syntax.~~
 9. ~~Use Automated Continuous Integration Server (e.g.Travis CI).~~
 10. Use feature branches and pull request with reviews for all features. *(1 point)*
@@ -19,9 +19,11 @@
     * Code coverage and other code inspections. Report or other kind of
 result must be available outside of the build machine after each run.
     * Integrate database
-    * ~~Documentation is converted to another format (e.g PDF or Html) and is
+    * Documentation is converted to another format (e.g PDF or Html) and is
 easily accessible outside of the build machine after each run (the build
-script needs to publish the documents to an external server).~~ *(held þetta sé nógu gott - spyrja kennara)*
+script needs to publish the documents to an external server). *(held þetta sé nógu gott - spyrja kennara)*
+        * Var búinn að útfæra /build/docs/../[classname.java] með `gradle javadoc` - en það orsakaði   
+        slatta af merge conflictum.
     * Something else ... Surprise us!!!
 12. Run focused integration or End-to-end tests (e.g. Selenium). 
     * It is necessary to run this on external staging server (e.g. Heroku). To run end-to-end test 
