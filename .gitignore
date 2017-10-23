@@ -23,7 +23,7 @@
 
 .gradle
 /build/*
-!/build/docs/
+#!/build/docs/
 
 # Ignore Gradle GUI config
 gradle-app.setting
