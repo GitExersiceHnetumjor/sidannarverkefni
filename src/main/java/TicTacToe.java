@@ -29,6 +29,8 @@ public class TicTacToe {
     }
 
     public static void main(String[] args) {
+        staticFileLocation("/public");
+
         port(getHerokuPort());
         get("/", (req, res) -> getGreeting(1, " "));
     }
