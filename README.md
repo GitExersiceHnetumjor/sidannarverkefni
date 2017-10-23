@@ -15,10 +15,9 @@ Hér mun síðan eitthvað standa um lausnina okkar.
 7. The code should be loosely coupled and follow good object oriented design practices.
 8. ~~Documentation uses Markdown syntax.~~
 9. ~~Use Automated Continuous Integration Server (e.g.Travis CI).~~
-10. Use feature branches and pull request for all features. **It must be clear that this workflow was used the whole time** and that the team was using
-reviews before accepting pull-requests. (1 point)
-11. More build targets (0,5 point per item, never more than 1 for this part) here
-are examples of build targets.
+10. Use feature branches and pull request with reviews for all features. *(1 point)*
+    * **It must be clear that this workflow was used the whole time**
+11. More build targets *(0,5 point per item, max 1 whole)* examples of build targets:
     * Code coverage and other code inspections. Report or other kind of
 result must be available outside of the build machine after each run.
     * Integrate database
