@@ -3,7 +3,7 @@
  */
 
 import static spark.Spark.*;
-
+import org.json.*;
 
 /** 
  * <h1>Tic Tac Toe</h1>
@@ -29,8 +29,15 @@ public class TicServer {
         );
     }
 
-    private String mark(String field){
-        return field;
+    private JSONObject mark(String field){
+        JSONObject obj = new JSONObject();
+        
+              obj.put("name", "foo");
+              obj.put("num", new Integer(100));
+              obj.put("balance", new Double(1000.21));
+              obj.put("is_vip", new Boolean(true));
+
+        return obj;
     }
 
     public static void main(String[] args) {
