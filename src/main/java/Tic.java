@@ -47,6 +47,13 @@ public class Tic {
 		return activePlayer;
 	}
 
+	public static boolean isDraw() {
+		if (turns == 9) {
+			return true;
+		}
+		return false;
+	}
+
 	public static boolean isWinner() {
 		if (board[0] == 'X' && board[1] == 'X' && board[2] == 'X'){
 			return true;

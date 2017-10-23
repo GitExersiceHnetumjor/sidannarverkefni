@@ -55,4 +55,30 @@ public class TicTest {
 		t.updateBoard(1);
 		assertFalse(Tic.isWinner());
 	}
+
+	@Test
+	public void testDraw() {
+		Tic t = new Tic();
+		t.updateBoard(1);
+		t.updateBoard(2);
+		t.updateBoard(3);
+		t.updateBoard(4);
+		t.updateBoard(5);
+		t.updateBoard(6);
+		t.updateBoard(7);
+		t.updateBoard(8);
+		t.updateBoard(9);
+		assertTrue(Tic.isDraw());
+	}
+
+	@Test
+	public void testNotDraw() {
+		Tic t = new Tic();
+		t.updateBoard(1);
+		t.updateBoard(2);
+		t.updateBoard(3);
+		t.updateBoard(4);
+		t.updateBoard(5);
+		assertFalse(Tic.isDraw());
+	}
 }
