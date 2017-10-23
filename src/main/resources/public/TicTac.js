@@ -5,6 +5,11 @@ $(document).ready(function(){
 		console.log(this.id);
 		WebCall("/mark/"+this.id);
 	});
+
+	$("#newGame").click(function() {
+		console.log("new game clicked");
+		newGame("/newGame");
+	});
 	
 });
 
@@ -14,6 +19,8 @@ $(document).ready(function(){
 		document.getElementById(id).innerHTML=" ";
 	}
 	document.getElementById("whoseMove").innerHTML="Next move: X";
+	//var audio = new Audio('audio_file.mp3');
+	//audio.play();
 })();
 
 function drawBoard(data) {
@@ -35,6 +42,9 @@ function drawBoard(data) {
 		else if (object.status === "draw") {
 			document.getElementById("whoseMove").innerHTML= "There is a draw!";
 		}
+		for(var id = 1; id <= 9; id++) {
+			document.getElementById(id).disabled = true;
+		}
 	}
 };
 
@@ -52,6 +62,26 @@ function WebCall(URL) {
 		}		 
 	});
 };
+
+function newGame(URL) {
+	$.ajax({
+		type: "GET",
+		data: null,
+		url: URL,
+		success: function(data) {
+			console.log("succesfull");
+
+			for(var id = 1; id <= 9; id++) {
+				document.getElementById(id).disabled = false;
+			}
+
+			drawBoard(data);
+		},
+		error: function () {
+			console.log("program crash sorry guys");
+		}		 
+	});
+}
 
 var gameOver = function(value) {
 	
