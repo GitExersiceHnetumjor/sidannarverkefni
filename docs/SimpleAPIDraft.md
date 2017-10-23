@@ -17,9 +17,9 @@ Function | Parameter | Return | Description
 
 Endpoint | Parameter | Return value | Description
 --- | --- | --- | ---
-`/update` | `/field` to update | Returns `JSON` representation of board | [Sample Payload][1]
+`/mark` | `/field` to update | Returns `JSON` representation of board | See [Sample Payload][1] below
 
-### Sample JSON Payload
+### `/mark/` Sample JSON Payload
 ```JSON
 {
   "board": [" ", "x", "o", " ", "o", "x", "x", "o", " "],
