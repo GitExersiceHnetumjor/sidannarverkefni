@@ -78,9 +78,7 @@ public class Tic {
 	}
 
 	/**
-	 * checkInput() is a function that checks if the
-	 * input is valid. The input can be a number from
-	 * 0 to 9.
+	 * player() is a function that returns activePlayer
 	 * @return the active player (X or O)
 	 */
 
