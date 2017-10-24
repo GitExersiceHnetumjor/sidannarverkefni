@@ -21,9 +21,9 @@ public abstract class SeleniumTestWrapper {
 		driver.quit();
 	}
 
-	@Test
+	/*@Test
 	public void testTitleMatch() {
 		driver.get(baseUrl);
 		assertEquals("Tic Tac Toe", driver.getTitle());
-	}
+	}*/
 }
