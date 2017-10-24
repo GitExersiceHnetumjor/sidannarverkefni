@@ -5,11 +5,13 @@ deploy:
     secure: c931a50f-2ba0-4b3b-9f38-1d4e251f414e
   app: sidannar-tictactoe
 
+before_script:
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+
 script: 
-  - phantomjs testTicTic.java
   - ./gradlew check
+  - ./gradlew seleniumXvfb
 
 
-before_install:
-  - gem install selenium-webdriver
 

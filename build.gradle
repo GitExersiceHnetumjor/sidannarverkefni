@@ -23,6 +23,7 @@ repositories {
 
 sourceSets {
     selenium
+    seleniumXvfb
 }
 
 dependencies {
@@ -37,10 +38,15 @@ dependencies {
 
     //Selenium
     seleniumCompile 'junit:junit:4.12'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.6.0'
     seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
+
+    seleniumXvfbCompile 'junit:junit:4.12'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.6.0'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
 }
 
-task stage(dependsOn: ['clean', 'installDist'])
+
 
 task generateJavaDoc(type: Javadoc){
     source = sourceSets.main.allJava
@@ -50,10 +56,21 @@ task generateJavaDoc(type: Javadoc){
 task selenium(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
+}
+
+task seleniumXvfb(type: Test, dependsOn: installDist) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
 
     doFirst {
-        'build/install/sidannarverkefni/bin/sidannarverkefni.bat'.execute()
+        'build/install/sidannarverkefni/bin/sidannarverkefni &'.execute()
+    }
+
+    doLast {
+        'sh -e /etc/init.d/xvfb stop'.execute()
     }
 }
+
+task stage(dependsOn: ['clean', 'installDist'])
 
 build.dependsOn generateJavaDoc
