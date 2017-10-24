@@ -83,7 +83,6 @@ task seleniumXvfb(type: Test, dependsOn: installDist) {
     environment "DISPLAY", ":99"
 
     doFirst {
-        chmod u+x 'bin/xvfb start'
         'bin/xvfb start'.execute()
         'build/install/sidannarverkefni/bin/sidannarverkefni &'.execute()
     }
