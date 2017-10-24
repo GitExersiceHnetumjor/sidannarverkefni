@@ -28,6 +28,6 @@ public abstract class SeleniumTestWrapper {
 	@Test
 	public void testTitle() {
 		String title = driver.getTitle();
-		assertEquals("Tic Tac Toe", title);
+		assertEquals("Tic Tac Toenail", title);
 	}
 }
