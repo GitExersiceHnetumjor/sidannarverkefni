@@ -23,6 +23,7 @@ install:
 
 script: 
   - ./gradlew check
+  - chmod +x gradlew
   - ./gradlew seleniumXvfb
 
 

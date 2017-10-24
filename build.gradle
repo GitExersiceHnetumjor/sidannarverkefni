@@ -72,9 +72,9 @@ task selenium(type: Test, dependsOn: installDist) {
     }
 }
 
-task filepermission(type: Exec) {
-    commandLine 'chmod', '+x', 'bin/xvfb'
-}
+//task filepermission(type: Exec) {
+ //   commandLine 'chmod', '700', 'bin/xvfb'
+//}
 
 task seleniumXvfb(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
