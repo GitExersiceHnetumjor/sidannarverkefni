@@ -8,7 +8,7 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
-applu plugin: 'jacoco'
+apply plugin: 'jacoco'
 
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
