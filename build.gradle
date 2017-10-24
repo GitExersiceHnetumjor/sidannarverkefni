@@ -8,6 +8,7 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+apply plugin: 'jacoco'
 
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
@@ -39,4 +40,12 @@ task generateJavaDoc(type: Javadoc){
     outputs.upToDateWhen { false }
 }
 
+jacocoTestReport {
+	reports {
+		xml.enabled = true;
+		html.enabled = false;
+	}
+}
+
 build.dependsOn generateJavaDoc
+check.dependsOn jacocoTestReport
