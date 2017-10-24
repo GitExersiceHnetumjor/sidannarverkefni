@@ -3,7 +3,10 @@ import org.openqa.selenium.firefox.*;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 import org.junit.AfterClass;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 public abstract class SeleniumTestWrapper {
 	static WebDriver driver;
