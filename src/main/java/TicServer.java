@@ -26,6 +26,7 @@ public class TicServer {
     private void init() {
         board = new Tic();
         get("/mark/:field", (req, res) -> mark(req.params(":field")));
+        get("/newGame", (req, res) -> reset());
     }
 
     private JSONObject mark(String field) {
@@ -53,6 +54,24 @@ public class TicServer {
 
         obj.put("nextMove", Character.toString(nextPlayer));
 
+        return obj;
+    }
+
+    public JSONObject reset(){
+        board = new Tic();
+        JSONObject obj = new JSONObject();
+        obj.put("board", board.board());
+        char nextPlayer = board.player();
+
+        if (board.isDraw()) {
+            obj.put("status", "draw");
+        } else if (board.isWinner()) {
+            obj.put("status", "win" + nextPlayer);
+        } else {
+            obj.put("status", "ongoing");
+        }
+
+        obj.put("nextMove", Character.toString(nextPlayer));
         return obj;
     }
 

@@ -1,4 +1,7 @@
-# Síðannarverkefni - Epli og Hnetusmjör [![Build Status](https://travis-ci.org/GitExersiceHnetumjor/sidannarverkefni.svg?branch=master)](https://travis-ci.org/GitExersiceHnetumjor/sidannarverkefni)
+# Síðannarverkefni - Epli og Hnetusmjör 
+[![Build Status](https://travis-ci.org/GitExersiceHnetumjor/sidannarverkefni.svg?branch=master)](https://travis-ci.org/GitExersiceHnetumjor/sidannarverkefni)
+[![Code Coverage](https://img.shields.io/codecov/c/github/pvorb/property-providers/develop.svg)](https://codecov.io/github/pvorb/property-providers?branch=develop)
+
 *Ellen - Hannes - Helgi - Ívar - Ketill - Margrét - Sigurður*
 
 ### +[Létt Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
