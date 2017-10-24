@@ -38,11 +38,11 @@ dependencies {
 
     //Selenium
     seleniumCompile 'junit:junit:4.12'
-    seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.6.0'
+    //seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.6.0'
     seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
 
     seleniumXvfbCompile 'junit:junit:4.12'
-    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.6.0'
+    //seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.6.0'
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
 }
 
@@ -56,18 +56,35 @@ task generateJavaDoc(type: Javadoc){
 task selenium(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
+
+    ant.condition(property: "os", value: "windows") { os(family: "windows") }
+    ant.condition(property: "os", value: "unix" ) { os(family: "unix") }
+
+    doFirst {
+        switch(ant.properties.os) {
+            case 'unix':
+                'build/install/sidannarverkefni/bin/sidannarverkefni &'.execute()
+                break
+            case 'windows':
+                'build\\install\\sidannarverkefni\\bin\\sidannarverkefni.bat'.execute()
+                break
+        }
+    }
 }
 
 task seleniumXvfb(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
 
+    environment "DISPLAY", ":99"
+
     doFirst {
-        'build/install/sidannarverkefni/bin/sidannarverkefni.bat'.execute()
+        'bin/xvfb start'.execute()
+        'build/install/sidannarverkefni/bin/sidannarverkefni &'.execute()
     }
 
     doLast {
-        'sh -e /etc/init.d/xvfb stop'.execute()
+        'bin/xvfb stop'.execute()
     }
 }
 
