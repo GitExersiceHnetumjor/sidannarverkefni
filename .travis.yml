@@ -6,7 +6,7 @@ deploy:
   app: sidannar-tictactoe
 
 script: 
- - phantomjs src/Selenium/testSelenium.js
+ - phantomjs src/Selenium/tests/testSelenium.js
  - ./gradlew check
 
 before_install:
