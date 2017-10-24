@@ -14,6 +14,10 @@ apply plugin: 'application'
 
 mainClassName='TicServer'
 
+sourceSets {
+    selenium
+}
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -30,6 +34,11 @@ dependencies {
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
+
+    //Selenium
+    seleniumCompile 'junit:junit:4.12'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
+
 }
 
 task stage(dependsOn: ['clean', 'installDist'])
@@ -39,4 +48,14 @@ task generateJavaDoc(type: Javadoc){
     outputs.upToDateWhen { false }
 }
 
+task selenium(type: Test, dependsOn: installDist) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+
+    doFirst {
+        'build/install/sidannarverkefni/bin/sidannarverkefni.bat'.execute()
+    }
+}
+
 build.dependsOn generateJavaDoc
+

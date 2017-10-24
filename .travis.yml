@@ -5,13 +5,9 @@ deploy:
     secure: c931a50f-2ba0-4b3b-9f38-1d4e251f414e
   app: sidannar-tictactoe
 
-language: node_js 
-node_js:
-  - 0.8
-env:
-- [
-    {secure: "PRzuk0jssMGM97FXyeBH0gFxx2DsTFGDhZiray5JfM3TJtEcdqQwZeZYuTISypBXTmtyuTahxlF4h/mz2UZOKZCV3JRjOHPzopwrtPHBgBl/QP8vYJkl0guTAucrlHVBEvigUjJTKe9H/P/Mwac+hfxhuDUi1nsyLvUhEwGr2hzYdNQUtzWsIzHnKNhDYyeKIk405OIHcy4PrZzbR6OymvS2opGzP1ap11UcY177WkMSrERac3WgFWooSoKhhOnB9CCfsrvIjoiOnArv5g89Hp/ALJc0eDYDemUPIwCGMCtO8nT/ZnwJufAxAR09Uv7xsh603PwwPOabh7JaV5hYO3m5cH/g2gYhAxVdXAAg+m8Lt6gv1/SeI8i1QGmq4VnlQ35rRa/ovTN8Ao7o2GGkwM8WMecFAZymBpFDWYrKw/7yE+IPqgjELyc8NOdUlP1CXMc3HR2qqs5mQon2HAbq36HOkeeMKl0fSFDIlYnVJyzdQmOeY6VmpRKJe5iWET7UHv2Q2Ah0qEHlvZFi1/ZxBzr937YrgGCcVr+v9PZs0woCPqyR4vjnlxxTVKSiAoirqMxWLiic1VbGhbandvFuUGbMVfoAvK//xlYrUlBQjN9KCRUhx+lPZ1w2EoxElY8CmzT+8eTqXa0SoG9SJO2rRns3Jd+zV9tD9SxeSUEp+Lc="},
-    {secure: "DVMAGifHELOsG6m9ZAFOrb3jiwrJs1H+cC+2z6/9jI77dRkl2b9hRiNz83QYoOzR01NFvVHeL5+I7CrywuxJXKmeCZt4dSPfDC2kU4ymhUibRy08sSReEs/z/f+ZlEg9rJi75icOOw7Ya3brOOCfLvCorj9wOH6jvZ1qeaa3/nIyy6yFOPWrwGsFV/knHQFgD40EpURJCEs/Bp9YVvgZrF9hgEm1FbW+lhlVTwQ8bhnJYSVlFgszB+7r91L/tQezuNIi6F7dsI3bPWggvwTita2vcaZFHnyVjBWVCCASYu+/Xqa6n9L2v/Ln2MNkMZvnotEON7+bLSmtbLxpKkIg38kEOXE5brLZLYZvyUnVfesHTidSp9UCbiwucsaOhCFymo7iDFgimbu8Nq6iiZj2sDXc9UDITwEgC457PvyEz6oFXmiwhbBfIxmfIN/G+Iapbal/31J/Js6xV3I6os5k2KIPPZfZtI7NJFOGObYdArMbqqpY9zgXvDFIE7+VK+k+sBg8FovqOm8FMBmgbGcNuUKogu0camVLRZiw79Uedyh3SFvgGFzS9gd1iWX+Z0qpBkIt87ocLQEGklCQP5BGyverVrwVT6oRieDDd2+sUwT1JmJvr3Y6V9vkP0QcQ0/R4jlftbmF78sH0QmyN1v/YHsCAB3Cqm+qsjOTV62A2eU="}
-  ]
-script:
-  - "node src/Selenium/tests/*.js"
+script: 
+ - phantomjs src/Selenium/testSelenium.js
+ - ./gradlew check
+
+before_install:
+- gem install selenium-webdriver
