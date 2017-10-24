@@ -6,9 +6,9 @@ deploy:
   app: sidannar-tictactoe
 
 script: 
-  - phantomjs testrunner.js
+  - phantomjs testTicTic.java
   - ./gradlew check
-  - ./gradlew seleniumXvFb --info
+
 
 before_install:
   - gem install selenium-webdriver
