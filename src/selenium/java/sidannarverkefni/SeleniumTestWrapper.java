@@ -20,4 +20,10 @@ public abstract class SeleniumTestWrapper {
 	public static void closeBrowser() {
 		driver.quit();
 	}
+
+	@Test
+	public void testTitleMatch() {
+		driver.get(baseUrl);
+		assertEquals("Tic Tac Toe", driver.getTitle());
+	}
 }

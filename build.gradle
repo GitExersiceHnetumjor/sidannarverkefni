@@ -72,6 +72,10 @@ task selenium(type: Test, dependsOn: installDist) {
     }
 }
 
+task filepermission(type: Exec) {
+    commandLine 'chmod', '+x', 'bin/xvfb'
+}
+
 task seleniumXvfb(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
@@ -79,6 +83,7 @@ task seleniumXvfb(type: Test, dependsOn: installDist) {
     environment "DISPLAY", ":99"
 
     doFirst {
+        chmod u+x 'bin/xvfb start'
         'bin/xvfb start'.execute()
         'build/install/sidannarverkefni/bin/sidannarverkefni &'.execute()
     }
