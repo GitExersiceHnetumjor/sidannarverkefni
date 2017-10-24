@@ -10,4 +10,4 @@ script:
  - ./gradlew check
 
 before_install:
-- gem install selenium-webdriver
+- npm install selenium-webdriver
