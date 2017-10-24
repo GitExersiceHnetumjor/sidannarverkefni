@@ -7,4 +7,4 @@ deploy:
 
 
 after_success:
-  bash <(curl -s )
+   bash <(curl -s https://codecov.io/bash)
