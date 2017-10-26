@@ -36,3 +36,4 @@ To run the game locally navigate to your local project directory in and run `gra
 
 The link to the Heroku app is: https://sidannar-tictactoe.herokuapp.com/
 
+![klasarittictactoe](https://user-images.githubusercontent.com/24222814/32079450-2dfa82da-ba9a-11e7-9ce4-94013a5233a9.png)
