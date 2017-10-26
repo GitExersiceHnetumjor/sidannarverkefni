@@ -7,15 +7,8 @@ This repository contains a web application that plays the game TicTacToe.
 TicTacToe is an old and famous game that revolves around two players playing on a 3x3 board. Each player plays with an X or an O and take turn placing their character in one of the 3x3 Squares. A game can be won by either players or the game can be a draw. The game is won when a player has either 3 of his characters vertically or horizontally or incline. The game is a draw when all 9 squares have been filled and no wins are made. Two players can play in our game.
 
 The source code is hosted on github
-* [Travis](http://travis-ci.org)
-* [jUnit](http://junit.org/junit5/)
-* [Spark](http://sparkjava.com/)
-* [Heroku](http://heroku.com)
-* [Gradle](https://gradle.org/install/)
-* [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-* [Jacoco](http://www.eclemma.org/jacoco/)
 
-Setting up
+##Setting up
 
 1. Install [Gradle](https://gradle.org/install/), 
 2. Install git, see instructions on installing git [here](https://help.github.com/articles/set-up-git/) 
@@ -33,3 +26,14 @@ Setting up
 To run the game locally navigate to your local project directory in and run `gradle clean build run`. Then go to your browser and enter localhost:4567.
 
 The link to the Heroku app is: https://sidannar-tictactoe.herokuapp.com/
+
+
+## Dependencies
+
+* [Travis](http://travis-ci.org)
+* [jUnit](http://junit.org/junit5/)
+* [Spark](http://sparkjava.com/)
+* [Heroku](http://heroku.com)
+* [Gradle](https://gradle.org/install/)
+* [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Jacoco](http://www.eclemma.org/jacoco/)
