@@ -13,6 +13,7 @@ The source code is hosted on github
 * [Heroku](http://heroku.com)
 * [Gradle](https://gradle.org/install/)
 * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Jacoco](http://www.eclemma.org/jacoco/)
 
 Setting up
 
