@@ -25,8 +25,16 @@ $(document).ready(function(){
 
 function drawBoard(data) {
 	var object = JSON.parse(data);
+	console.log(object.board);
 	for(var id = 1; id <= 9; id++) {
-		document.getElementById(id).innerHTML=object.board[id - 1];
+		if (object.board[id-1] == "X" || object.board[id-1] == "O") {
+			document.getElementById(id).innerHTML=object.board[id - 1];
+			
+		}
+		else
+		{
+			document.getElementById(id).innerHTML=" ";
+		}	
 	}
 	console.log("fake status: " + object.status)
 	if (object.status === "ongoing") {
@@ -37,7 +45,7 @@ function drawBoard(data) {
 			document.getElementById("whoseMove").innerHTML= "X has won the game";
 		}
 		else if (object.status === "winO") {
-			document.getElementById("whoseMove").innerHTML= "O has won the game1";
+			document.getElementById("whoseMove").innerHTML= "O has won the game";
 		}
 		else if (object.status === "draw") {
 			document.getElementById("whoseMove").innerHTML= "There is a draw!";
