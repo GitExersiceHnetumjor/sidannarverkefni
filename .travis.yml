@@ -1,4 +1,14 @@
 language: java
+script:
+  ./gradlew check
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: c931a50f-2ba0-4b3b-9f38-1d4e251f414e
+  app: sidannar-stage
+
+
 deploy:
   provider: heroku
   api_key:
