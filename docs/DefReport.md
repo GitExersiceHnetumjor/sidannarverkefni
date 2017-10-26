@@ -23,15 +23,20 @@ When finished, we could start coding the game. Before coding the game we wrote a
 
 Code is usally broken down into three layers, top layer (GUI), business layer and data layer. However in this project we only have two layers the top and business, because we don't use a database. 
 In the business layer we have 
-	* TicServer.java 
-	* Tic.java
-	* TicServerTest.java
-	* TicTest.java 
-The business layer the game is created and the unit test with it. 
-In the top layer or graphic user interface layer we have 
-	* TicTac.js
-	* index.html
-	* style.css 
+
+* TicServer.java 
+* Tic.java
+* TicServerTest.java
+* TicTest.java 
+
+The business layer the game is created and the unit test with it.
+
+In the top layer or graphic user interface layer we have
+
+* TicTac.js
+* index.html
+* style.css 
+	
 The top layer is where the user interfaced is designed. 
 
 After coding the game itself is turned out a bit different from the class diagram however that is what usally happens. What changed in Tic.java is we added the player function to make the code more readable. In the TicTest.java we made two tests for each function to test valid and invalid input. 
