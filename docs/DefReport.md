@@ -3,17 +3,17 @@ DefReport.md
 
 # Design Report 
 
-## Epli og hnetusmjör
-## Ellen Sigurðardóttir
-## Hannes Jóhannsson
-## Helgi Hallgrímsson
-## Ívar Örn Kristjánsson
-## Ketill Antoníus Ágústsson
-## Margrét Finnbogadóttir
-## Sigurður Jónsson
+### Epli og hnetusmjör
+#### Ellen Sigurðardóttir
+#### Hannes Jóhannsson
+#### Helgi Hallgrímsson
+#### Ívar Örn Kristjánsson
+#### Ketill Antoníus Ágústsson
+#### Margrét Finnbogadóttir
+#### Sigurður Jónsson
 ------------------------------
 
-## About the project:
+### About the project:
 
 This repository contains a web application that plays the game TicTacToe. 
 
@@ -40,14 +40,14 @@ TicTacToe is an old and famous game that revolves around two players playing on 
 To get a better vision of our design before coding, we decided to make a class diagram.
 ![klasarittictactoe](https://user-images.githubusercontent.com/24222814/32079450-2dfa82da-ba9a-11e7-9ce4-94013a5233a9.png)
 
-### Before we started coding we decided make some ground rules.
+#### Before we started coding we decided make some ground rules.
 
-### Coding rules and methods
+#### Coding rules and methods
 All classes start with a upper case letter and all following words or pascal case. The functions and variables start with a lower case letter and all words after the first one start with a upper case letter or camel case. When using brackets we leave the fist one in the same line on the right and the other one in a new line at the bottom to the left.
 The coding method that we used is TDD (test driven development). TDD is when we code one unit and make a test for it. The test for the unit should start by failing and then we write the test for the desired output. We used pair-programming where two members would work together on one branch.
 Every time we change something in the project make a new branch and named it something descriptive. When the feature was ready we would make a pull request and another member would have to look it over and accept it. Everything is done in english.
 
-### Layers
+#### Layers
 Code is usually broken down into three layers, top layer (GUI), business layer and data layer. However in this project we only have two layers the top and business. We decided not to have a database in the design process and therefore we don't keep a score of how many times the players have won.
 
 #### Top layer (GUI)
