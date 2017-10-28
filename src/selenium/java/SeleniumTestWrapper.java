@@ -6,6 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+
+
 public abstract class SeleniumTestWrapper {
   static WebDriver driver;
   static String baseUrl;
@@ -13,6 +20,7 @@ public abstract class SeleniumTestWrapper {
 
   @BeforeClass
   public static void openBrowser() {
+    //System.setProperty("webdriver.gecko.driver", "/home/travis/build/sidannarverkefni")
     driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -21,6 +29,12 @@ public abstract class SeleniumTestWrapper {
       //  port = "4567";
     //}
     baseUrl = "https://sidannar-tictactoe.herokuapp.com/";
+  }
+
+  @Test
+  public void testTitleMatches() {
+    driver.get(baseUrl);
+    assertEquals("Tic Tac Toe", driver.getTitle());
   }
 
   @AfterClass
