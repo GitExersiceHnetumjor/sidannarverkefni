@@ -8,14 +8,14 @@ import org.junit.BeforeClass;
 
 
 public abstract class SeleniumTestWrapper {
-  static ChromeDriver driver;
+  static WebDriver driver;
   static String baseUrl;
   static String port;
 
   @BeforeClass
   public static void openBrowser() {
     //System.setProperty("webdriver.gecko.driver", "/home/travis/build/sidannarverkefni")
-    driver = new ChromeDriver();
+    driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     baseUrl = "https://sidannar-tictactoe.herokuapp.com/";
