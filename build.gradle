@@ -40,12 +40,12 @@ dependencies {
     //Selenium
     seleniumCompile 'junit:junit:4.12'
     seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
-    //seleniumCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.6.0'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.6.0'
 
     //SeleniumXvfb
     seleniumXvfbCompile 'junit:junit:4.12'
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
-    //seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.6.0'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.6.0'
 }
 
 task stage(dependsOn: ['clean', 'installDist'])
