@@ -24,17 +24,13 @@ public abstract class SeleniumTestWrapper {
     driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-    //port = System.getenv("PORT");
-    //if (port == null) {
-      //  port = "4567";
-    //}
     baseUrl = "https://sidannar-tictactoe.herokuapp.com/";
   }
 
   @Test
   public void testTitleMatches() {
     driver.get(baseUrl);
-    assertEquals("Tic Tac Toe", driver.getTitle());
+    assertEquals("Tic Tac", driver.getTitle());
   }
 
   @AfterClass
