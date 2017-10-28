@@ -60,6 +60,9 @@ task selenium(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
 
+    doFirst {
+        'build/install/sidannarverkefni/bin/sidannarverkefni.bat'.execute()
+    }
 }
 
 task seleniumXvfb(type: Test, dependsOn: installDist) {
