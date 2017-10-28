@@ -6,7 +6,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 public abstract class SeleniumTestWrapper {
-  static ChromeDriver driver;
+  static WebDriver driver;
   static String baseUrl;
   static String port;
 
