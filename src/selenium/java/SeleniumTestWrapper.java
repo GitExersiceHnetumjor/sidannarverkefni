@@ -15,6 +15,7 @@ public abstract class SeleniumTestWrapper {
   @BeforeClass
   public static void openBrowser() {
     //System.setProperty("webdriver.gecko.driver", "/home/travis/build/sidannarverkefni")
+    System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"false"); 
     driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
