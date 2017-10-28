@@ -14,14 +14,14 @@ import org.openqa.selenium.WebElement;
 
 
 public abstract class SeleniumTestWrapper {
-  static WebDriver driver;
+  static ChromeDriver driver;
   static String baseUrl;
   static String port;
 
   @BeforeClass
   public static void openBrowser() {
     //System.setProperty("webdriver.gecko.driver", "/home/travis/build/sidannarverkefni")
-    driver = new FirefoxDriver();
+    driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     baseUrl = "https://sidannar-tictactoe.herokuapp.com/";
@@ -30,7 +30,7 @@ public abstract class SeleniumTestWrapper {
   @Test
   public void testTitleMatches() {
     driver.get(baseUrl);
-    assertEquals("Tic Tac", driver.getTitle());
+    assertEquals("Tic Tac T", driver.getTitle());
   }
 
   @AfterClass
