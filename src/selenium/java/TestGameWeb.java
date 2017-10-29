@@ -11,11 +11,11 @@ public class TestGameWeb extends SeleniumTestWrapper {
   @Test
   public void testTitleMatches() {
     driver.get(baseUrl);
-    assertEquals("Tic Tac", driver.getTitle());
+    assertEquals("Tic Tac Toe", driver.getTitle());
   }
 }
 
-  /*@Test
+  @Test
   public void testWinForX() {
     driver.get(baseUrl);
  
@@ -140,4 +140,4 @@ public class TestGameWeb extends SeleniumTestWrapper {
 
     assertEquals("", buttonClicGetWinner9.getText());
   }
-}*/
+}
