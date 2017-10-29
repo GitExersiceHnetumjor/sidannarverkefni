@@ -4,13 +4,13 @@ DefReport.md
 # Design Report 
 
 ### Epli og hnetusmjör
-#### Ellen Sigurðardóttir
-#### Hannes Jóhannsson
-#### Helgi Hallgrímsson
-#### Ívar Örn Kristjánsson
-#### Ketill Antoníus Ágústsson
-#### Margrét Finnbogadóttir
-#### Sigurður Jónsson
+Ellen Sigurðardóttir
+Hannes Jóhannsson
+Helgi Hallgrímsson
+Ívar Örn Kristjánsson
+Ketill Antoníus Ágústsson
+Margrét Finnbogadóttir
+Sigurður Jónsson
 ------------------------------
 
 ### About the project:
