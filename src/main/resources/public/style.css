@@ -1,7 +1,13 @@
+body {
+	background: #070000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #070000, #4C0001, #070000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #070000, #4C0001, #070000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Permanent Marker', cursive;
+}
+
 .theGame {
 	width: 350px;
 	height: 350px;
-	background: #eee;
 	border: 1px solid #ddd;
 	margin: 50px auto;
 	padding: 10px;
@@ -20,6 +26,16 @@
 	width: 50px;
 	height: 50px;
 	margin: 5px;
+	font-size: 20px;
+	transition: all 0.3s ease-in-out 0s;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.button:hover {
+	cursor: default;
+    transform: rotate(90deg);
+    transition: all 0.3s ease-in-out 0s;
+	border: 2px solid black;
 }
 
 .theButtons {
@@ -33,11 +49,19 @@
 	overflow: auto;
 }
 
-.gameActions h3 {
-	color: green;
+.gameActions h2 {
+	color: red;
 	margin-bottom: 3px;
 }
 
-.gameActions h4 {
+.gameActions h3 {
 	margin-top: 3px;
+}
+
+.new {
+	font-family: 'Permanent Marker', cursive;
+}
+
+.new:hover {
+	border: 2px solid black;
 }
