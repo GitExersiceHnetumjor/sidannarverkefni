@@ -17,6 +17,7 @@ mainClassName='TicServer'
 
 sourceSets {
     selenium
+    seleniumXvfb
 }
 
 // In this section you declare where to find the dependencies of your project
@@ -39,7 +40,12 @@ dependencies {
     //Selenium
     seleniumCompile 'junit:junit:4.12'
     seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
+   // seleniumCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.6.0'
 
+    //SeleniumXvfb
+    seleniumXvfbCompile 'junit:junit:4.12'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
+    //seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.6.0'
 }
 
 task stage(dependsOn: ['clean', 'installDist'])
@@ -56,6 +62,15 @@ task selenium(type: Test, dependsOn: installDist) {
 
     doFirst {
         'build/install/sidannarverkefni/bin/sidannarverkefni.bat'.execute()
+    }
+}
+
+task seleniumXvfb(type: Test, dependsOn: installDist) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+
+    doLast {
+        'sh -e /etc/init.d/xvfb stop'.execute()
     }
 }
 
