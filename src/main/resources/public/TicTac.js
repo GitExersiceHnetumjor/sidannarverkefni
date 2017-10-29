@@ -2,12 +2,10 @@
 $(document).ready(function(){
 
 	$(".button").click(function() {
-		console.log(this.id);
 		WebCall("/mark/"+this.id);
 	});
 
 	$("#newGame").click(function() {
-		console.log("new game clicked");
 		newGame("/newGame");
 	});
 	
@@ -25,18 +23,15 @@ $(document).ready(function(){
 
 function drawBoard(data) {
 	var object = JSON.parse(data);
-	console.log(object.board);
 	for(var id = 1; id <= 9; id++) {
 		if (object.board[id-1] == "X" || object.board[id-1] == "O") {
 			document.getElementById(id).innerHTML=object.board[id - 1];
-			
 		}
 		else
 		{
 			document.getElementById(id).innerHTML=" ";
 		}	
 	}
-	console.log("fake status: " + object.status)
 	if (object.status === "ongoing") {
 		document.getElementById("whoseMove").innerHTML="Next move: " + object.nextMove;
 	} 
@@ -91,9 +86,6 @@ function newGame(URL) {
 	});
 }
 
-var gameOver = function(value) {
-	
-}
 
 
 
