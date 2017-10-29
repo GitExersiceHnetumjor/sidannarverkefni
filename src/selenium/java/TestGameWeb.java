@@ -13,7 +13,6 @@ public class TestGameWeb extends SeleniumTestWrapper {
     driver.get(baseUrl);
     assertEquals("Tic Tac Toe", driver.getTitle());
   }
-}
 
   @Test
   public void testWinForX() {
