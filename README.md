@@ -1,6 +1,6 @@
 # Síðannarverkefni - Epli og Hnetusmjör 
 [![Build Status](https://travis-ci.org/GitExersiceHnetumjor/sidannarverkefni.svg?branch=master)](https://travis-ci.org/GitExersiceHnetumjor/sidannarverkefni)
-[![Code Coverage](https://img.shields.io/codecov/c/github/pvorb/property-providers/develop.svg)](https://codecov.io/github/pvorb/property-providers?branch=develop)
+[![codecov](https://codecov.io/gh/GitExersiceHnetumjor/sidannarverkefni/branch/master/graph/badge.svg)](https://codecov.io/gh/GitExersiceHnetumjor/sidannarverkefni)
 
 Production Server: ![Heroku](https://heroku-badge.herokuapp.com/?app=sidannar-tictactoe)
 
