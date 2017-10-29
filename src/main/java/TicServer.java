@@ -42,10 +42,10 @@ public class TicServer {
 
         char nextPlayer = board.player();
 
-        if (board.isDraw()) {
-            obj.put("status", "draw");
-        } else if (board.isWinner()) {
+        if (board.isWinner()) {
             obj.put("status", "win" + nextPlayer);
+        } else if (board.isDraw()) {
+            obj.put("status", "draw");
         } else {
             obj.put("status", "ongoing");
         }
@@ -63,10 +63,10 @@ public class TicServer {
         obj.put("board", board.board());
         char nextPlayer = board.player();
 
-        if (board.isDraw()) {
-            obj.put("status", "draw");
-        } else if (board.isWinner()) {
+        if (board.isWinner()) {
             obj.put("status", "win" + nextPlayer);
+        } else if (board.isDraw()) {
+            obj.put("status", "draw");
         } else {
             obj.put("status", "ongoing");
         }
