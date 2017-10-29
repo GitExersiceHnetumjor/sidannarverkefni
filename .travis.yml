@@ -15,15 +15,18 @@ before_install:
 
 script:
   - ./gradlew check
-  - ./gradlew seleniumXvfb
 
-
-deploy:
-  provider: heroku
-  api_key:
-    secure: c931a50f-2ba0-4b3b-9f38-1d4e251f414e
-  app: sidannar-tictactoe
-
+jobs:
+  include:
+    deploy:
+      provider: heroku
+      api_key:
+        secure: c931a50f-2ba0-4b3b-9f38-1d4e251f414e
+      app: sidannar-stage
+    script: ./gradlew seleniumXvfb
+    deploy:
+      <<: *heroku
+      app: sidannar-tictactoe
 
 after_success:
    bash <(curl -s https://codecov.io/bash)
