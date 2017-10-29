@@ -28,5 +28,6 @@ jobs:
       <<: *heroku
       app: sidannar-tictactoe
 
+
 after_success:
    bash <(curl -s https://codecov.io/bash)
