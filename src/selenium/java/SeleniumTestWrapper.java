@@ -18,7 +18,7 @@ public abstract class SeleniumTestWrapper {
     driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-    baseUrl = "https://sidannar-tictactoe.herokuapp.com/";
+    baseUrl = "https://sidannar-stage.herokuapp.com/";
   }
 
 
