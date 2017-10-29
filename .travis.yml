@@ -13,12 +13,10 @@ before_install:
   - tar -xzf geckodriver-v0.19.0-linux64.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
 
-script:
-  - ./gradlew check
-  #- ./gradlew seleniumXvfb
-
 jobs:
   include:
+    - stage: unit tests
+      script: ./gradlew check
     - stage: deploy to staging
       script: skip
       deploy: &heroku
