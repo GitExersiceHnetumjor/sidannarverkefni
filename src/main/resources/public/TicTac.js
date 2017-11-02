@@ -8,7 +8,13 @@ $(document).ready(function(){
 	$("#newGame").click(function() {
 		newGame("/newGame");
 	});
-	
+	//----------------------------------------------
+    //This is a feature for the presentation:
+	$("#counter").click(function() {
+		counter("/incrementCounter");
+	});	
+	//Close of feature
+    //----------------------------------------------
 });
 
 // initial draw board
@@ -51,6 +57,15 @@ function drawBoard(data) {
 	}
 };
 
+//----------------------------------------------
+//This is a feature for the presentation:
+function incrementCounter(data) {
+	var object = JSON.parse(data);
+	document.getElementById("counter").innerHTML= object.counter;
+}
+//Close of feature
+//----------------------------------------------
+
 function WebCall(URL) {
 	$.ajax({
 		type: "GET",
@@ -85,6 +100,27 @@ function newGame(URL) {
 		}		 
 	});
 }
+
+//----------------------------------------------
+//This is a feature for the presentation:
+function counter(URL) {
+	$.ajax({
+		type: "GET",
+		data: null,
+		url: URL,
+		success: function(data) {
+			console.log("succesfull");
+			console.log(data);
+			incrementCounter(data);
+			drawBoard(data);
+		},
+		error: function () {
+			console.log("program crash sorry guys");
+		}		 
+	});
+}
+//Close of feature
+//----------------------------------------------
 
 
 

@@ -27,7 +27,40 @@ public class TicServer {
         board = new Tic();
         get("/mark/:field", (req, res) -> mark(req.params(":field")));
         get("/newGame", (req, res) -> reset());
+
+        //----------------------------------------------
+        //This is a feature for the presentation:       
+        get("/incrementCounter", (req, res) -> counter());
+        //Close of feature
+        //----------------------------------------------
     }
+    
+    //----------------------------------------------
+    //This is a feature for the presentation:
+    private JSONObject counter()  {
+        board.incrementCounterFeature();
+        JSONObject obj = new JSONObject();
+
+         char nextPlayer = board.player();
+
+        if (board.isWinner()) {
+            obj.put("status", "win" + nextPlayer);
+        } else if (board.isDraw()) {
+            obj.put("status", "draw");
+        } else {
+            obj.put("status", "ongoing");
+        }
+
+        obj.put("board", board.board());
+
+        obj.put("nextMove", Character.toString(nextPlayer));
+
+        obj.put("counter", board.getCounterFeature());
+
+        return obj;
+    }
+    //Close of feature
+    //----------------------------------------------
 
     private JSONObject mark(String field) {
         int fieldIndex = Integer.parseInt(field);
@@ -81,6 +114,5 @@ public class TicServer {
 
         TicServer server = new TicServer();
         server.init();
-
     }
 }

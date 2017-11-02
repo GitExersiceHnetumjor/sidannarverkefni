@@ -1,5 +1,11 @@
 
 public class Tic {
+	//----------------------------------------------
+	//This is a feature for the presentation:
+	private static int counterFeature;
+	//Close of feature
+	//----------------------------------------------
+
 	private static char board[];
 	private static int turns;
 	private static char activePlayer;
@@ -11,6 +17,11 @@ public class Tic {
 	*/
 
 	public Tic() {
+		//----------------------------------------------
+		//This is a feature for the presentation:
+		counterFeature = 0;
+		//Close of feature
+		//----------------------------------------------
 		turns = 0;
 		activePlayer = 'X';
 		board = new char[9];
@@ -21,6 +32,18 @@ public class Tic {
 			board[i] = b;
 		}
 	}
+
+	//----------------------------------------------
+	//This is a feature for the presentation:
+	public static String getCounterFeature() {
+		return String.valueOf(counterFeature);
+	}
+
+	public static void incrementCounterFeature() {
+		counterFeature += 1;
+	}
+	//Close of feature
+	//----------------------------------------------
 
 	/**
 	 * board() is an array of chars that keeps track of
