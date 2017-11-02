@@ -88,4 +88,16 @@ public class TicTest {
 		t.updateBoard(1);
 		assertEquals(t.board()[0], 'X');		
 	}
+	
+	//----------------------------------------------
+    //This is a feature for the presentation:
+    @Test
+	public void testPresFut() {
+		Tic t = new Tic();
+		t.incrementCounterFeature();
+		t.incrementCounterFeature();
+		assertEquals(t.getCounterFeature(), 2);		
+	}
+	//Close of feature
+    //----------------------------------------------
 }

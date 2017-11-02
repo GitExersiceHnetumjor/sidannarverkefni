@@ -139,4 +139,32 @@ public class TestGameWeb extends SeleniumTestWrapper {
 
     assertEquals("", buttonClicGetWinner9.getText());
   }
+
+  //----------------------------------------------
+  //This is a feature for the presentation:
+  @Test
+  public void testclickPresentationFeature() {
+    driver.get(baseUrl);
+
+    WebElement buttonClicRestartGame = driver.findElement(By.id("newGame"));
+    buttonClicRestartGame.click();
+
+    WebElement buttonClickCounter1 = driver.findElement(By.id("counter"));
+    buttonClickCounter1.click();
+
+    WebElement buttonClickCounter2 = driver.findElement(By.id("counter"));
+    buttonClickCounter2.click();
+
+    try{
+        Thread.sleep(2000);
+    }
+      catch(InterruptedException ie){
+    }  
+
+    WebElement CounterGetText = driver.findElement(By.id("counter"));
+    assertEquals("2", CounterGetText.getText());
+  }
+  //Close of feature
+  //----------------------------------------------
+  
 }
