@@ -35,8 +35,8 @@ public class Tic {
 
 	//----------------------------------------------
 	//This is a feature for the presentation:
-	public static int getCounterFeature() {
-		return counterFeature;
+	public static String getCounterFeature() {
+		return String.valueOf(counterFeature);
 	}
 
 	public static void incrementCounterFeature() {
